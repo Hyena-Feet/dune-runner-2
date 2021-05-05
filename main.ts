@@ -2,6 +2,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     mySprite.vy += 50
 })
 function Day1 () {
+    tiles.setTilemap(tilemap`level1`)
     scene.setBackgroundImage(img`
         ................................................................................................................................................................
         ................................................................................................................................................................
@@ -147,3 +148,4 @@ mySprite = sprites.create(img`
 mySprite.ay = 100
 mySprite.ax = 100
 tiles.placeOnTile(mySprite, tiles.getTileLocation(0, 0))
+Day1()
