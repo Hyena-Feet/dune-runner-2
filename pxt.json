@@ -1,8 +1,9 @@
 {
-    "name": "Dune Runner 2",
+    "name": "Gatapolypse",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0"
     },
     "files": [
         "main.blocks",
@@ -10,7 +11,9 @@
         "README.md",
         "assets.json",
         "tilemap.g.jres",
-        "tilemap.g.ts"
+        "tilemap.g.ts",
+        "images.g.jres",
+        "images.g.ts"
     ],
     "testFiles": [
         "test.ts"
