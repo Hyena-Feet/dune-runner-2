@@ -22,25 +22,6 @@ f f f . f f f b . . . . . . . .
 f f . . . . b b b . . . . . . . 
 . . . . . . b b b b . . . . . . 
 `;
-            case "image1":
-            case "myImage":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-`;
             case "image2":
             case "myImage0":return img`
 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -163,6 +144,25 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcbcbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+`;
+            case "image1":
+            case "myImage":return img`
+. . . . . c c b b b . . . . . . 
+. . . . c b d d d d b . . . . . 
+. . . . c d d d d d d b b . . . 
+. . . . c d d d d d d d d b . . 
+. . . c b b d d d d d d d b . . 
+. . . c f f d d d d d f f b . . 
+. c c c c b f f b f f d b b b . 
+. c d d b c 2 b b b 2 b b b d b 
+c b b d d d b b b b b d d b d b 
+c c b b d d f f f f d b b b d c 
+c b c c c f b b b b f b d d c c 
+c c b b c c c c b d d d b c c b 
+. c c c c c c c c c c c b b b b 
+. . c c c c c b b b b b b b c . 
+. . . . . . c c b b b b c c . . 
+. . . . . . . . c c c c . . . . 
 `;
         }
         return null;
