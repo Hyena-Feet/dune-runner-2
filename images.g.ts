@@ -147,22 +147,20 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 `;
             case "image1":
             case "myImage":return img`
-. . . . . c c b b b . . . . . . 
-. . . . c b d d d d b . . . . . 
-. . . . c d d d d d d b b . . . 
-. . . . c d d d d d d d d b . . 
-. . . c b b d d d d d d d b . . 
-. . . c f f d d d d d f f b . . 
-. c c c c b f f b f f d b b b . 
-. c d d b c 2 b b b 2 b b b d b 
-c b b d d d b b b b b d d b d b 
-c c b b d d f f f f d b b b d c 
-c b c c c f b b b b f b d d c c 
-c c b b c c c c b d d d b c c b 
-. c c c c c c c c c c c b b b b 
-. . c c c c c b b b b b b b c . 
-. . . . . . c c b b b b c c . . 
-. . . . . . . . c c c c . . . . 
+. . . . . f f . . . . f f . 
+. . . . f c c f . . f c c f 
+. . . . f b c c f f c c b f 
+. . . . f 3 b c b c c b 3 f 
+. . . . f b 3 c c c c 3 b f 
+. . . . b c c c c c c c c b 
+b f b . b c f c c c c f c b 
+f c f . f c c f c c f c c f 
+f c f . f 3 c c b b c c b f 
+f c f f b b 3 3 3 3 3 3 f . 
+f b c b b c c c c c c b f . 
+. f f f c c b c c c c c f . 
+. . . f c f f c f f f c f . 
+. . . f f . . f f . . f f . 
 `;
         }
         return null;
