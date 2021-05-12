@@ -1,3 +1,6 @@
+namespace SpriteKind {
+    export const EnemyProjectile = SpriteKind.create()
+}
 sprites.onCreated(SpriteKind.Enemy, function (sprite) {
     Enemy_Position = randint(1, 4)
 })
@@ -6,45 +9,26 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
         lane += -1
     }
 })
+sprites.onOverlap(SpriteKind.EnemyProjectile, SpriteKind.Player, function (sprite, otherSprite) {
+	
+})
 function Day1 () {
     scene.setBackgroundImage(assets.image`myImage0`)
     game.splash("Use the Arrow Keys to move up and down, Make sure to Dodge incoming projectiles.")
-    Day_Difficulty = 3
+    Day_Difficulty = 3000
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    projectile = sprites.createProjectileFromSprite(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, mySprite, 50, 50)
-})
-sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
-    mySprite.setVelocity(-20, 0)
+	
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     if (lane < 4) {
         lane += 1
     }
 })
-let mySprite2: Sprite = null
-let projectile: Sprite = null
+let Wolf: Sprite = null
 let Day_Difficulty = 0
 let Enemy_Position = 0
 let lane = 0
-let mySprite: Sprite = null
 scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -167,45 +151,47 @@ scene.setBackgroundImage(img`
     77777777777777777777777777777777777777777777eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     77777777777777777777777777777777777777777eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     `)
-mySprite = sprites.create(assets.image`myImage`, SpriteKind.Player)
+let mySprite = sprites.create(assets.image`myImage`, SpriteKind.Player)
 lane = 3
 let statusbar = statusbars.create(20, 3, StatusBarKind.Health)
 statusbar.value = 100
 statusbar.attachToSprite(mySprite, 2, 0)
 Day1()
 game.onUpdateInterval(Day_Difficulty, function () {
-    if (SpriteKind.Enemy == 0) {
-    	
-    } else if (0 == 0) {
-    	
-    } else if (0 == 0) {
-    	
-    } else if (0 == 0) {
-    	
+    if (Enemy_Position == 1) {
+        Wolf.setPosition(150, 35)
+    } else if (Enemy_Position == 2) {
+        Wolf.setPosition(150, 58)
+    } else if (Enemy_Position == 3) {
+        Wolf.setPosition(150, 86)
+    } else {
+        Wolf.setPosition(150, 109)
     }
 })
 game.onUpdateInterval(Day_Difficulty, function () {
-    mySprite2 = sprites.create(img`
-        . . . . . . . . . e e e e . . . 
-        . . . . . . . e e e e e e . . . 
-        . . . . . . e e e e e e e . . . 
-        . . . e e e e e e e e e e e e . 
-        . e e e e e e 2 e e e e e e e e 
-        e e e e e e e e e e e e e e e e 
-        e e e e e e e e e e e e e e e e 
-        e e e e e e e e e e e e e e e e 
-        . . . e e e e e e e e e e e e e 
-        . . . . . e e e e e e e e e e e 
-        . . . . . . e e e e e e e e e e 
-        . . . . . . e e e e e e e e e e 
-        . . . . . . . e e e e e e e e e 
-        . . . . . . . e e e e e e e e e 
-        . . . . . . . e e e e e e e e e 
-        . . . . . . . . e e e e e e e e 
+    Wolf = sprites.create(img`
+        ..................
+        ..................
+        ..................
+        ....fffffffff.....
+        ..efffffffffffe...
+        ..ef2fffffff2fe...
+        ..efffffffffffe...
+        ..efffffffffffe...
+        ..efffffffffffe...
+        ....ffffffffff....
+        .....fffffffff....
+        .......fffffff....
+        ........ffffff....
+        ..........ffff....
+        ...........fff....
+        ............f.....
+        ..................
+        ..................
         `, SpriteKind.Enemy)
 })
 forever(function () {
-    info.setScore(lane)
+    info.setScore(Enemy_Position)
 })
 forever(function () {
     if (lane == 1) {
